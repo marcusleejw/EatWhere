@@ -25,7 +25,7 @@ export default function StoreOption({ navigation }) {
           <FlatButton
             styleInput={buttonStyle}
             text={item.store+ " Average wait time: " + item.waitTime + " minutes"}
-            onPress={() => navigation.navigate('FoodDetails', item.menu)}
+            onPress={() => navigation.navigate('StoreMenu', item)}
           />
         )}
       />

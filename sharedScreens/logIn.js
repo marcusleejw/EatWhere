@@ -107,11 +107,11 @@ export default function LogIn({ navigation }) {
         >
           Don't have account? Click here to Register
         </Text>
-        <Button
+        {/* <Button
             color="#f01d71"
             title="     Developer Testing     "
             onPress={() => devLogin()}
-          />
+          /> */}
       </View>
     </TouchableWithoutFeedback>
   );

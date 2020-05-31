@@ -5,7 +5,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import EatingPlaceOption from '../userScreens/eatingPlaceOption';
 import StoreOption from '../userScreens/storeOption';
 import Header from '../shared/header';
-import FoodDetails from '../userScreens/foodDetail'
+import StoreMenu from '../userScreens/storeMenu'
+import FoodDetails from '../userScreens/foodDetails';
 import Cart from '../userScreens/cart';
 import PaymentModal from "../userScreens/paymentModal";
 
@@ -38,12 +39,18 @@ export default function OrderFoodStack() {
           component={StoreOption}
           options={{ headerTitle: () => <Header title="Stores" /> }}
         />
-
+        
         <Stack.Screen
-          name="FoodDetails"
-          component={FoodDetails}
+          name="StoreMenu"
+          component={StoreMenu}
           options={{ headerTitle: () => <Header title="Menu" /> }}
         /> 
+
+        <Stack.Screen 
+          name = "FoodDetails"
+          component = { FoodDetails }
+          options={{ headerTitle: () => <Header title="Details" /> }}
+        />
 
         <Stack.Screen 
           name = "Cart"

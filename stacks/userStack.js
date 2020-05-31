@@ -36,17 +36,17 @@ export default function UserStack() {
           component={OrderFoodStack}
         />
 
-         {/*<Stack.Screen
+        <Stack.Screen
           name="CheckQueueNo"
           component={CheckQueueNo}
           options={{ headerTitle: () => <Header title="Queue Number Tracking" /> }}
-        />*/
+        />
 
         <Stack.Screen
           name="LogOut"
           component={LogOut}
           options={{ headerTitle: () => <Header title="Log Out" /> }}
-        />}
+        />
 
       </Stack.Navigator>
   );

@@ -3,26 +3,26 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
-  Modal,
+  Button
   } from "react-native";
 import firebase from "../database/Firebase";
 import FlatButton from "../shared/button";
 
 
-export default function Cart( {navigation}) {
-
-
+export default function PaymentModal ({ navigation }) {
     return (
-        <View style = {styles.container}>
-            <Text>
-                Welcome to your cart!
+        <View style = { styles.container }> 
+            <Text> 
+                Payment Screen
             </Text>
-            <Button 
+
+            <View> 
+                <Button 
+                onPress = { () => navigation.navigate('UserSelectionPage')}
+                title = 'Back to Home'
                 color = '#f01d71'
-                title = 'Place order'
-                onPress = { () => navigation.navigate('PaymentModal') }  
-            />
+                />
+            </View>
         </View>
     )
 }
@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        alignItems: 'center',
+        alignItems:'center',
         padding: 50,
         backgroundColor: "#fff",
     },
-});
+})
